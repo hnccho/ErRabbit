@@ -1,4 +1,4 @@
-package org.mintcode.errabbit;
+package org.mintcode.errabbit.config;
 
 /**
  * ActiveMQ Config

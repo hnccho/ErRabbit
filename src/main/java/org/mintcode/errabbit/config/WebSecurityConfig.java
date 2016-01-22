@@ -1,4 +1,4 @@
-package org.mintcode.errabbit;
+package org.mintcode.errabbit.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -41,14 +41,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .csrf().disable()
                 .httpBasic()
-                .and().headers() // Websocket
+                .and()
+                .headers() // Websocket
                 .frameOptions()
                 .sameOrigin();
     }
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser(username).password(password).roles("USER");
+        auth.inMemoryAuthentication().withUser(username).password(password).roles("USER");
     }
 }

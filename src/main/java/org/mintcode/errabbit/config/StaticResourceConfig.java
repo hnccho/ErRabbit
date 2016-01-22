@@ -1,4 +1,4 @@
-package org.mintcode.errabbit;
+package org.mintcode.errabbit.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;

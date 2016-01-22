@@ -48,8 +48,9 @@ public class RabbitController {
 
         try {
             List<Rabbit> rabbitList = rabbitCache.getRabbits();
-            model.addAttribute("groups", rabbitManagingService.
-                    getRabbitGroupWithRabbitSorted(rabbitManagingService.getRabbitsByGroup(rabbitList)));
+            model.addAttribute("groups", 
+            		rabbitManagingService.getRabbitGroupWithRabbitSorted(
+            		rabbitManagingService.getRabbitsByGroup(rabbitList)));
             model.addAttribute("lastStatics", rabbitCache.getDailyStatisticsMap());
             model.addAttribute("info", info);
             model.addAttribute("error", error);
